@@ -1,0 +1,167 @@
+@import "../libs/responsive";
+$color :#33658a;
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: none; 
+    transition: 1s ease-in;
+    z-index: 1000;
+    
+}
+
+.preloader::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $color;
+    transition: 2.5s ease-out 3s;
+    
+} 
+
+.preloader.complete{
+    
+    visibility: hidden;
+    pointer-events: none;
+    transition: 2.5s;
+}
+.preloader.complete::before
+{
+    opacity: 0;
+}
+
+
+.balourd{
+    animation: apparition 2.9s ease-in infinite;
+}
+.imri
+{
+    margin: auto;
+    position: relative;
+    width:  297px;
+    height: 456px;
+    overflow: hidden; /*Contenu caché sans barre de défilement*/
+    transform: scale(0.8);  
+}
+
+@keyframes apparition {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1; 
+    } 
+    100%{
+        opacity: 0;
+    }
+}
+
+.imri:before
+{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom:-85px;
+    width:100%;
+    height: 120px;
+    background: $color;
+    z-index: 2;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    transform: scaleX(1.5);
+}
+
+
+
+@keyframes balourd{
+ 
+    0%
+    {
+        right: 0;
+    }
+
+    100%
+    {
+        right: -400%;
+    }
+
+}
+
+
+.imri span{
+    position: absolute;
+    top:0;
+    width: 8em;
+    height: 90%;
+    
+}
+
+
+/*************************************************/
+
+.imri span:nth-child(1)
+{
+    background: #e5eaee;
+    left: 100px;
+    top: -144px;
+    z-index: 1;
+    transform: rotate(90deg);
+    
+}
+
+.imri span:nth-child(2)
+{
+    background: #fbfdff;
+    left: 32%;
+    width: 40%;
+}
+
+.imri span:nth-child(3)
+{
+    background: #f3f4f5;
+    left: 100px;
+    top: 200px;
+    z-index: 1;
+    transform: rotate(90deg);
+
+}
+
+.title__imri
+{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: arial;
+    color: #f0f8ff;
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 18px;
+    margin-top: -30px;
+    top: -20px;
+}
+
+@media #{$medium-md}
+{
+    .imri{
+        top: 200px;
+    }
+    .title__imri{
+        top: 190px;
+        left: 9px;
+    }
+}
+@media #{$small-width}{
+    .imri{ 
+        left: 0;
+        top: 20px;
+    }
+    .title__imri{
+        left: 9px;
+        top: 20px; 
+    }
+}

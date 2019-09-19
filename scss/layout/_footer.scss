@@ -1,0 +1,26 @@
+$color : #33658a;
+footer{
+    background-color: $color;
+    height: auto;
+
+    img{
+        width: 2rem;
+        height: 2rem;
+    } 
+    
+    .copyright{
+        position: relative;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        width: auto;
+    }
+    .copyright-detail {
+        color: white;
+        a{ 
+            color:white;
+            text-decoration: underline;
+        }
+    }
+   
+}

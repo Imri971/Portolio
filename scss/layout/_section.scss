@@ -1,0 +1,768 @@
+@import "../libs/responsive";
+$color : #33658a;
+$font : Georgia, "Times New Roman", Times, serif;
+
+
+.mb-7, .my-7 {
+
+    margin-bottom: 5rem !important;
+
+}
+.presentation,
+.formation,
+.skills,
+.experience,
+.hobbies,
+.contact,
+.folio
+{
+    
+    height: auto;
+    overflow: hidden;
+}
+
+//********************************************* PRESENTATION ******************************************
+.presentation{ 
+    background-color: #ffffff;
+    height: auto;
+
+    h2{
+        color: $color;
+    } 
+    img{
+        margin-top: -70px;
+        width: 9em;
+        height: 9em;
+        filter: contrast(112%) brightness(152%);
+        border-radius: 100%;
+    } 
+    .presentation__block{
+        background: #f2f2f2;
+        margin-top: 3em;
+        box-shadow: 12px 21px 24px rgba(159, 160, 161, 0.4);
+    }
+    .presentation__text{
+        padding:0px 8rem 1rem;
+    }
+    .presentation__bottom{
+    
+        position: relative;
+        a{
+            color: $color !important;
+            text-decoration: none;
+    
+            } 
+    
+        &:hover a{
+            color: $color !important; 
+            background-color: transparent !important;
+        }   
+    } 
+    .presentation__btn{
+        
+    
+        display: block;
+        padding: 14px 18px;
+        font-weight: 700; 
+        letter-spacing: 6px;
+        color: $color;
+        width: auto;
+        font-size: 13px;
+        border: 2px solid $color;
+        text-transform: uppercase;
+        outline: none; 
+        overflow: hidden !important;
+        background: none;
+        background-color: transparent !important;
+        z-index: 1;
+        cursor: pointer;
+        transition: 1s ease-out;
+    
+            
+    &:before{
+        content: "";
+        background: $color;
+        position:absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: -1;
+        transition: top 0.8s ease-out;
+    }
+        &:hover{
+            color:white;
+        }
+        &:hover:before {
+            top: 0;
+            color: $color;
+        }
+           
+    
+            
+    }
+}
+
+//********************************************* FORMATION ****************************************
+.formation{
+    background-color: #dddddd;
+    .timeline{
+        position: relative;
+        margin: 0 auto;
+        padding: 40px 0;
+        width: 100%; 
+        box-sizing: border-box;
+    }
+    .timeline::before
+    {
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 4px;
+        height: 85%;
+        background-color: $color;
+        
+    
+    }
+    .timeline ul{
+        margin: 0;
+        padding: 0;
+    }
+    .timeline ul li{
+        line-height: normal;
+        position: relative;
+        width: 50%;
+        padding: 15px 40px;
+        list-style: none;
+        box-sizing: border-box;
+    
+    }
+    .timeline ul li:nth-child(odd)
+    {
+        float: left;
+        text-align: right;
+        clear: both;
+    }
+    .timeline ul li:nth-child(even)
+    {
+        float: right;
+        text-align: left;
+        clear: both;
+    }
+    .content{
+        padding-bottom: 10px;
+        
+    }
+    .content h4{
+        color: #000;
+        font-style: italic;
+        font-size: 15px;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+    .content p{
+      
+            line-height: 21px;
+    }
+    .timeline ul li:nth-child(odd)::before{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: '\f067';
+        color: white;
+        position: absolute;
+        top: 16px;
+        right: -12px;
+        width: 22px;
+        height: 22px;
+        background: $color;
+        border-radius: 50%;
+        text-align: center;
+        padding: 2px;
+    }
+    .timeline ul li:nth-child(even)::before{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: '\f067';
+        color: white;
+        position: absolute;
+        top: 19px;
+        left: -10px;
+        width: 22px;
+        height: 22px;
+        background: $color;
+        border-radius: 50%;
+        text-align: center;
+        padding: 2px;
+    }
+    .timeline ul li h3{
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+        color: $color;
+    }
+    
+    .timeline ul li p{
+        margin: 10px 0 0;
+        padding: 0;
+    }
+    .timeline ul li .bac h4{
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+    }
+    .timeline ul li:nth-child(odd) .bac{
+        position: absolute;
+        top:12px;
+        right: -107px;
+        margin:0;
+        padding: 6px 16px;
+        border: 2px solid $color;
+        color: $color;
+        border-radius: 15px;
+       
+    }
+    
+    .timeline ul li:nth-child(even) .bac{
+        position: absolute;
+        top:12px;
+        left: -107px;
+        margin:0;
+        padding: 6px 16px;
+        border: 2px solid $color;
+        color: $color;
+        border-radius: 15px;
+        
+    }
+}
+
+//************************************************ SKILLS ********************************************
+.skills{ 
+        background-color: #dddddd; 
+    
+    .fab {
+        color: $color;
+        font-size: 8rem;
+        margin-bottom: 2rem;
+    }
+    .img_skills
+    {
+        width: 112px;
+        height: 128px;
+        margin-bottom: 2rem;
+    }
+
+    .skills__bar{
+        width: 50%; 
+        height: 1rem; 
+        border-radius: 4px;
+        border: 2px solid $color;
+        margin: 10px auto 3rem;
+        transition:0.3s linear;
+	    transition-property:width, background-color;
+    }
+
+    .bar {
+        background-color: $color;
+        width: 0px;
+        height: 100%;
+    }
+    
+}
+.tools{
+    h2{
+        color: $color;
+    }
+}
+//****************************************** PORTFOLIO ****************************************
+.folio 
+{
+    background-color: #dddddd;
+    color: $color;
+    .container {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .item-thumbnail {
+        overflow: hidden;
+        
+        position: relative;
+        height: 400px;
+        img{
+            transition: all 1s ease-in-out;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .item-thumbnail:hover{
+        box-shadow: 6px 8px 4px rgba(162, 165, 170, 0.6);
+    }
+    .item-thumbnail:hover img {
+
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.5);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+    
+    }
+    .item-thumbnail.readmore .overthumb {
+        background: $color;
+        height: 100%;
+    }
+    .item-thumbnail .overthumb {
+        
+        display: block; 
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        text-align: center;
+        top: auto;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        transition: all 0.8s ease-out;
+        width: 100%;
+    }
+    .item-thumbnail:hover .overthumb {
+        opacity: 0.8;
+        top: 0;
+    }
+    .item-thumbnail .icons {
+        display: block;
+        font-size: 19px;
+        height: auto;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        transition: all 0.4s ease-out;
+        position: absolute;
+        text-align: center;
+        top: 100%;
+        width: 100%;
+    }
+    .item-thumbnail:hover .icons {
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+        top: 45%;
+    }
+    .item-thumbnail.readmore .icons {
+        border-bottom: 1px solid #fff;
+    }
+    .item-thumbnail .icons a {
+        border-radius: 3px;
+        font-size: 0.875em;
+        outline: 0;
+        margin-right: 5px;
+        padding: 10px;
+    }
+    .item-thumbnail.readmore .icons a {
+        font-size: 19px;
+        background: none;
+        color: #fff;
+        font-family: $font;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .item-thumbnail.readmore .icons a:hover {
+        color: rgba(233, 244, 255, 0.6);
+    }
+    .class-item h3 { 
+
+        font-family: $font;
+        text-transform: uppercase;
+        border-bottom: 8px solid $color;
+        font-size: 1.3em;
+        font-weight: 500;
+        margin:7px ;
+        a{
+            color: #3b3b3b;
+            transition: all .3s ease;
+            line-height: 50px;
+            text-decoration: none;
+        }
+    }
+    .class-item h3 a:hover {
+
+        color: $color;
+    
+    }
+}
+//******************************************* EXPERIENCE ************************************
+.experience{
+    background-color: #dddddd;
+}
+.timeline{
+    position: relative;
+    margin: 0 auto;
+    padding: 40px 0 40px 11px;
+    width: 1000px;
+    box-sizing: border-box;
+}
+.timeline::before
+{
+    content: "";
+    position: absolute;
+    left: 50.5%;
+    width: 4px;
+    height: 85%;
+    background-color: $color;
+    
+
+}
+.timeline ul{
+    margin: 0;
+    padding: 0;
+}
+.timeline ul li{
+    line-height: normal;
+    position: relative;
+    width: 50%;
+    padding: 15px 40px;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+.timeline ul li:nth-child(odd)
+{
+    float: left;
+    text-align: right;
+    clear: both;
+}
+.timeline ul li:nth-child(even)
+{
+    float: right;
+    text-align: left;
+    clear: both;
+}
+.content{
+    padding-bottom: 10px;
+    text-align: left;
+    
+}
+.timeline ul li:nth-child(odd)::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f067';
+    color: white;
+    position: absolute;
+    top: 16px;
+    right: -12px;
+    width: 22px;
+    height: 22px;
+    background: $color;
+    border-radius: 50%;
+    text-align: center;
+    padding: 1px;
+}
+.timeline ul li:nth-child(even)::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f067';
+    color: white;
+    position: absolute;
+    top: 19px;
+    left: -10px;
+    width: 22px;
+    height: 22px;
+    background: $color;
+    border-radius: 50%;
+    text-align: center;
+    padding: 1px;
+}
+.timeline ul li h3{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    color: $color;
+}
+.timeline ul li p{
+    margin: 10px 0 0;
+    padding: 0;
+}
+.timeline ul li .time h4{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+.timeline ul li:nth-child(odd) .time{
+    position: absolute;
+    top:12px;
+    right: -162px;
+    margin:0;
+    padding: 8px 16px;
+    background: $color;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 0 3px rgba(55, 82, 168, 0.2);
+}
+
+.timeline ul li:nth-child(even) .time{
+    position: absolute;
+    top:12px;
+    left: -231px;
+    margin:0;
+    padding: 8px 16px;
+    background: $color;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 0 3px rgba(55, 82, 168, 0.2);
+}
+
+//******************************************** HOBBIES **********************************************
+.hobbies
+{
+    background: linear-gradient(rgba(23, 23, 26, 0.6), rgba(9, 9, 9, 0.6)), url(../img/wood.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    .container { 
+        padding: 0 0;
+    }
+    .col-12{
+        padding: 0 0;
+    }
+
+    .card {
+        width: auto;
+        padding-right: 10px !important;
+    }
+    .icon{
+        font-size: 3rem;
+        color: $color;
+        
+        padding:7px;
+
+    }
+    img {
+        width: 90px;
+        height: 70px;
+    }
+    .fas{ 
+        border:none;
+        border-radius: none;
+        padding: none;  
+    }
+    
+    
+ 
+}
+
+//********************************************** CONTACT****************************************************
+.contact{
+    background-color: #dddddd;
+    .icon{
+        color: $color;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 1rem;
+    }
+    .title__bar--primary{ 
+ 
+        width: 4em;
+        left: 34%;}
+    .block{
+        display: block;
+         
+    }
+    .block:hover{
+        box-shadow: 5px 8px 15px 3px rgba(179, 181, 191, 0.5);
+    }    
+    .contact__detail {
+        p{
+        color: $color;
+    }
+        a{
+            color: $color;
+            text-decoration: none;
+            &:hover{
+                font-weight: bold;
+            }
+        }
+
+    }
+}
+
+.cross{
+    font-size: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    color: $color;
+}
+//******************************** MEDIA QUERIES ******************************************
+
+@media #{$medium-md}{
+    .parallax-window { 
+        min-height: 400px;
+        background: transparent;
+    }
+    
+    .title__bar--primary {
+ 
+        width: 4em;
+        left: 46%;}
+
+        .presentation{
+            .presentation__text{
+               padding: 0 2rem 1rem;
+
+            }
+        }    
+        .formation{
+            .timeline{
+                width: 100%;
+            }
+            .timeline:before{
+                left: 20px;
+                height: 80%;
+                
+            } 
+            .timeline ul li:nth-child(odd),
+            .timeline ul li:nth-child(even){
+                 width: 100%;
+                 text-align: left;
+                 padding-left: 50px;
+                 padding-bottom: 50px;
+            }
+            .timeline ul li:nth-child(odd):before,
+            .timeline ul li:nth-child(even):before
+             {
+                top: -18px;
+                left: 12px;
+            }
+           
+            .timeline ul li:nth-child(2n+1) .bac,
+            .timeline ul li:nth-child(2n) .bac{
+                top: -22px;  
+                left: 50px;
+                right: inherit;
+            }
+        }
+
+        .timeline{
+            width: 100%;
+        }
+        .timeline:before{
+            left: 20px;
+            height: 81.5%;
+           
+        } 
+        .timeline ul li:nth-child(odd),
+        .timeline ul li:nth-child(even){
+             width: 100%;
+             text-align: center;
+             padding-left: 50px;
+             padding-bottom: 50px;
+        }
+        .timeline ul li:nth-child(odd):before,
+        .timeline ul li:nth-child(even):before
+         {
+            top: -18px;
+            left: 0;
+        }
+       
+        .timeline ul li:nth-child(2n+1) .time,
+        .timeline ul li:nth-child(2n) .time{
+            top: -22px;  
+            left: 50px;
+            right: inherit;
+        }
+
+      .folio{
+        .class-item h3 { 
+            a{  
+                line-height: 27px; }
+         }  
+      }  
+
+    .hobbies{
+        background-attachment: scroll;
+        background-size: 100% 700px;
+        .card{
+            width: 106px;
+        }
+    } 
+    .contact{
+        
+        .title__bar--primary{
+            left: 45.5%;}
+    }
+
+
+}
+
+@media #{$medium-up}{
+    .title__bar--primary {
+        left: 47.5%;}
+}
+
+@media #{$small-width}{
+    .title__bar--primary {
+
+        width: 4em;
+        left: 41%;}    
+    .formation{
+        .timeline:before{
+            height: 88%;
+        } }
+
+        .skills{
+            .fab {
+                font-size: 7rem;
+            }
+            .img_skills
+            {
+                width: 84px;
+                height: 112px;
+                margin-bottom: 2rem;
+            } 
+            .skills_block{
+                width: 50% !important;
+            }
+            .skills__bar{
+                width: 60%;
+            }
+            
+            .tools{
+                margin-bottom: 20px !important;
+            }
+        }  
+    .folio{
+        .item-thumbnail{
+            box-shadow: 6px 8px 4px rgba(162, 165, 170, 0.6);
+        } 
+    }    
+    .timeline::before {
+
+        left: 20px;
+        height: 86.5%;}
+    .contact{
+        .title__bar--primary{
+            left:40.5%
+        }
+        .block{
+            border-radius: 5px;
+            box-shadow: 5px 8px 15px 3px rgba(179, 181, 191, 0.5);
+        }   
+    }  
+    
+  
+    
+}
+@media #{$xsmall-width}{
+    .hobbies{
+        padding-top: 24px !important;
+        
+        background-size: 100% 864px;
+    }
+
+
+}
